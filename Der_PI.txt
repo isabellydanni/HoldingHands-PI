@@ -1,0 +1,36 @@
+CREATE  DATABASE  db_rede_social ;
+
+USE db_rede_social;
+
+
+CRIAR  TABELA ` tb_tema` (
+	` Id `  INT ( 16 ) NOT NULL AUTO_INCREMENT,
+	` Tema `  VARCHAR ( 255 ) não nulo ,
+	` Descricao `  VARCHAR ( 511 ) não nulo ,
+	` Qnt_posts `  INT ( 16 ) não nulo ,
+	PRIMÁRIA CHAVE ( ` ID ` )
+);
+
+CRIAR  TABELA ` tb_usuario` (
+	` Id `  INT ( 16 ) NOT NULL AUTO_INCREMENT,
+	` Nome_completo `  VARCHAR ( 255 ) não nulo ,
+	` Email `  varchar ( 255 ) NOT NULL UNIQUE,
+	` Senha `  VARCHAR ( 255 ) não nulo ,
+	PRIMÁRIA CHAVE ( ` ID ` )
+);
+
+CRIAR  TABELA ` tb_postagem` (
+	` Id `  INT ( 16 ) NOT NULL AUTO_INCREMENT,
+	` Tipo_postagem `  VARCHAR ( 255 ) não nulo ,
+	` Texto_postagem `  VARCHAR ( 511 ) não nulo ,
+	` Titulo `  VARCHAR ( 255 ) não nulo ,
+	` Data_postagem ` DATETIME NOT NULL ,
+	` Qnt_curtidas `  INT ( 16 ) não nulo ,
+	` Id_usuario `  INT ( 16 ) não nulo ,
+	` Id_tema `  INT ( 16 ) não nulo ,
+	PRIMÁRIA CHAVE ( ` ID ` )
+);
+
+ALTER  TABLE  ` tb_postagem ` ADD RESTRIÇÃO  ` tb_postagem_fk0 `  EXTERNA CHAVE ( ` id_usuario ` ) Referências  ` tb_usuario ` ( ` ID ` );
+
+ALTER  TABLE  ` tb_postagem ` ADD RESTRIÇÃO  ` tb_postagem_fk1 `  EXTERNA CHAVE ( ` id_tema ` ) Referências  ` tb_tema ` ( ` ID ` );
