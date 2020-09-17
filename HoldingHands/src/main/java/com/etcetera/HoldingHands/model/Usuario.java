@@ -22,10 +22,13 @@ public class Usuario {
 	private long id;
 
 	@Size(min = 2, max = 255)
-	private String nomeCompleto;
+	private String nome;
 	
 	@Size(min = 5)
 	private String email;
+	
+	@Size(min = 5)
+	private String usuario;
 	
 	@Size(min = 8)
 	private String senha;
@@ -42,12 +45,12 @@ public class Usuario {
 		this.id = id;
 	}
 
-	public String getNomeCompleto() {
-		return nomeCompleto;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setNomeCompleto(String nomeCompleto) {
-		this.nomeCompleto = nomeCompleto;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	public String getEmail() {
@@ -56,6 +59,14 @@ public class Usuario {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	public String getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
 	}
 
 	public String getSenha() {
