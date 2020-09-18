@@ -1,0 +1,17 @@
+com\etcetera\HoldingHands\model\HoldingHands.class
+com\etcetera\HoldingHands\config\SwaggerConfig.class
+com\etcetera\HoldingHands\model\Postagem.class
+com\etcetera\HoldingHands\controller\UsuarioController.class
+com\etcetera\HoldingHands\model\UsuarioLogin.class
+com\etcetera\HoldingHands\controller\TemaController.class
+com\etcetera\HoldingHands\repository\UsuarioRepository.class
+com\etcetera\HoldingHands\seguranca\BasicSecurityConfig.class
+com\etcetera\HoldingHands\HoldingHandsApplication.class
+com\etcetera\HoldingHands\seguranca\UserDetailsImpl.class
+com\etcetera\HoldingHands\model\Usuario.class
+com\etcetera\HoldingHands\model\Tema.class
+com\etcetera\HoldingHands\repository\PostagemRepository.class
+com\etcetera\HoldingHands\controller\PostagemController.class
+com\etcetera\HoldingHands\service\UsuarioService.class
+com\etcetera\HoldingHands\seguranca\UserDetailsServiceImpl.class
+com\etcetera\HoldingHands\repository\TemaRepository.class
