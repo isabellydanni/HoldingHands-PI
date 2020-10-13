@@ -9,9 +9,9 @@ com\etcetera\HoldingHands\seguranca\BasicSecurityConfig.class
 com\etcetera\HoldingHands\HoldingHandsApplication.class
 com\etcetera\HoldingHands\seguranca\UserDetailsImpl.class
 com\etcetera\HoldingHands\model\Usuario.class
+com\etcetera\HoldingHands\seguranca\UserDetailsServicelmpl.class
 com\etcetera\HoldingHands\model\Tema.class
 com\etcetera\HoldingHands\repository\PostagemRepository.class
 com\etcetera\HoldingHands\controller\PostagemController.class
 com\etcetera\HoldingHands\service\UsuarioService.class
-com\etcetera\HoldingHands\seguranca\UserDetailsServiceImpl.class
 com\etcetera\HoldingHands\repository\TemaRepository.class

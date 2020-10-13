@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.etcetera.HoldingHands.model.UsuarioLogin;
 import com.etcetera.HoldingHands.model.Usuario;
+import com.etcetera.HoldingHands.model.UsuarioLogin;
 import com.etcetera.HoldingHands.repository.UsuarioRepository;
 import com.etcetera.HoldingHands.service.UsuarioService;
 
@@ -41,6 +41,11 @@ public class UsuarioController {
 	@GetMapping("/{id}")
 	private ResponseEntity<Usuario> getById(@PathVariable long id) {
 		return repository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
+	}
+	
+	@GetMapping("/nome/{nome}")
+	public ResponseEntity<Optional<Usuario>> getByName(@PathVariable String nome){
+		return ResponseEntity.ok(repository.findByUsuario(nome));
 	}
 
 	@PostMapping
