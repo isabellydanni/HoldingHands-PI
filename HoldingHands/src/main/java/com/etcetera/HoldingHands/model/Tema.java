@@ -27,7 +27,7 @@ public class Tema {
 	@Size(min = 2, max = 511)
 	private String descricao;
 	
-	@Size(min = 0)
+	
 	private long qnt_posts;
 	
 	@OneToMany(mappedBy = "tema", cascade = CascadeType.ALL)
@@ -65,4 +65,13 @@ public class Tema {
 	public void setQnt_posts(long qnt_posts) {
 		this.qnt_posts = qnt_posts;
 	}
+
+	public List<Postagem> getPostagem() {
+		return postagem;
+	}
+
+	public void setPostagem(List<Postagem> postagem){
+		this.postagem = postagem;
+	}	
+	
 }

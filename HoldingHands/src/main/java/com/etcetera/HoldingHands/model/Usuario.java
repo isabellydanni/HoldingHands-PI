@@ -40,7 +40,7 @@ public class Usuario {
 	
 	private String foto;
 	
-	private boolean admin;
+	//private boolean admin;
 
 	public long getId() {
 		return id;
