@@ -40,7 +40,7 @@ public class Usuario {
 	
 	private String foto;
 	
-	//private boolean admin;
+	private boolean admin;
 
 	public long getId() {
 		return id;
@@ -97,4 +97,13 @@ public class Usuario {
 	public void setFoto(String foto) {
 		this.foto = foto;
 	}
+
+	public boolean isAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(boolean admin) {
+		this.admin = admin;
+	}	
+	
 }

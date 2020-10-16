@@ -16,6 +16,8 @@ public class UsuarioLogin {
 	
     private String foto;
 	
+    private boolean admin;
+    
 	public String getNome() {
 		return nome;
 	}
@@ -71,5 +73,15 @@ public class UsuarioLogin {
 	public void setFoto(String foto) {
 		this.foto = foto;
 	}
+
+	public boolean isAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(boolean admin) {
+		this.admin = admin;
+	}
+
+	
 }
 
