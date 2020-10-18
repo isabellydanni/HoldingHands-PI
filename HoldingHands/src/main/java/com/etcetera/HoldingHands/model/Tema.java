@@ -27,7 +27,6 @@ public class Tema {
 	@Size(min = 2, max = 511)
 	private String descricao;
 	
-	
 	private long qnt_posts;
 	
 	@OneToMany(mappedBy = "tema", cascade = CascadeType.ALL)

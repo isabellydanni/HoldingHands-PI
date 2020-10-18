@@ -3,6 +3,7 @@ package com.etcetera.HoldingHands.model;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -28,6 +29,7 @@ public class Usuario {
 	private String email;
 	
 	@Size(min = 5)
+	@Column(unique=true)
 	private String usuario;
 	
 	@Size(min = 8)
