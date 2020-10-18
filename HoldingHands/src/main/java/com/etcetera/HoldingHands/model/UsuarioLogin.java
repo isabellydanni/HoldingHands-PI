@@ -4,20 +4,34 @@ public class UsuarioLogin {
 	
 	private String nome;
 	
+	private long id;
+	
 	private String email;
 	
 	private String usuario;
 	
     private String senha;
 	
-	private String token;
+    private String token;
 	
+    private String foto;
+	
+    private boolean admin;
+    
 	public String getNome() {
 		return nome;
 	}
 
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
 	}
 
 	public String getEmail() {
@@ -52,7 +66,22 @@ public class UsuarioLogin {
 		this.token = token;
 	}
 
-	
+	public String getFoto() {
+		return foto;
+	}
 
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+
+	public boolean isAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(boolean admin) {
+		this.admin = admin;
+	}
+
+	
 }
 

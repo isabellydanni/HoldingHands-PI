@@ -3,6 +3,7 @@ package com.etcetera.HoldingHands.model;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -28,6 +29,7 @@ public class Usuario {
 	private String email;
 	
 	@Size(min = 5)
+	@Column(unique=true)
 	private String usuario;
 	
 	@Size(min = 8)
@@ -36,6 +38,11 @@ public class Usuario {
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("usuario")
 	private List<Postagem> postagem;
+	
+	
+	private String foto;
+	
+	private boolean admin;
 
 	public long getId() {
 		return id;
@@ -84,4 +91,21 @@ public class Usuario {
 	public void setPostagem(List<Postagem> postagem) {
 		this.postagem = postagem;
 	}
+
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+
+	public boolean isAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(boolean admin) {
+		this.admin = admin;
+	}	
+	
 }
